@@ -8,7 +8,7 @@
 .menu {
   height: 100vh;
   width: 100%;
-  background-image: url(/docs/assets/BG.jpg);
+  background-image: url(assets/BG.jpg);
   background-size: cover;
   background-position: center;
 }
