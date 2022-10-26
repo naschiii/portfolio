@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="script" href="script.js" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -30,21 +29,23 @@
     <div class="menu" id="home">
       <nav>
         <h2 class="logo">Logo</h2>
-        <ul>
+        <ul class="navbar">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Über mich</a></li>
           <li><a href="#laufbahn">Laufbahn</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Kontakt</a></li>
-          <!-- <i class="fas fa-times"></i> -->
         </ul>
-        <!-- <i class="fas fa-bars"></i> -->
-        <a href="#" class="btn">Button</a>
+        <div class="main-sym">
+          <div class="fas fa-times" id="close-menu"></div>
+          <div class="fas fa-bars" id="menu-bar"></div>
+        </div>
+        <!-- <a href="#" class="btn">Button</a> -->
       </nav>
       <div class="content">
         <h4>Hallo! Mein Name ist</h4>
         <h1>Natascha <span>Karlen</span></h1>
-        <h3>Ich bin eine coole <span>Socke</span></h3>
+        <h3>Ich bin <span>blabla</span></h3>
         <!-- <div class="newsletter">
           <form>
             <input
@@ -71,7 +72,7 @@
             bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
             bla bla bla bla bla bla bla bla bla bla bla bla bla
           </p>
-          <button type="button">Lass uns quasseln</button>
+          <!-- <button type="button">Lass uns quasseln</button> -->
         </div>
       </div>
     </section>
@@ -89,7 +90,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-SBB">
-                      <img src="assets/sbb.png" alt="" />
+                      <img class="sbb-screen" src="assets/sbb.png" alt="" />
+                      <img class="sbb-smartphone" src="assets/sbb_smartphone.png" alt="">
                     </div>
                     <h3 class="title"> seit September 2020</h3>
                     <p class="description">
@@ -100,7 +102,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-SBB">
-                      <img src="assets/sbb.png" alt="sbb" />
+                      <img class="sbb-screen" src="assets/sbb.png" alt="" />
+                      <img class="sbb-smartphone" src="assets/sbb_smartphone.png" alt="">
                     </div>
                     <h3 class="title">Juli 2018 - September 2020</h3>
                     <p class="description">
@@ -113,7 +116,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-SBB">
-                      <img src="assets/sbb.png" alt="sbb" />
+                      <img class="sbb-screen" src="assets/sbb.png" alt="" />
+                      <img class="sbb-smartphone" src="assets/sbb_smartphone.png" alt="">
                     </div>
                     <h3 class="title">März 2018 - Juli 2018</h3>
                     <p class="description">
@@ -125,7 +129,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-SBB">
-                      <img src="assets/sbb.png" alt="sbb" />
+                      <img class="sbb-screen" src="assets/sbb.png" alt="" />
+                      <img class="sbb-smartphone" src="assets/sbb_smartphone.png" alt="">
                     </div>
                     <h3 class="title">März 2015 - Juni 2018</h3>
                     <p class="description">
@@ -136,7 +141,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-SBB">
-                      <img src="assets/sbb.png" alt="sbb" />
+                      <img class="sbb-screen" src="assets/sbb.png" alt="" />
+                      <img class="sbb-smartphone" src="assets/sbb_smartphone.png" alt="">
                     </div>
                     <h3 class="title">Oktober 2014 - Februar 2015</h3>
                     <p class="description">SBB RailService <p>Kundenberaterin</p></p>
@@ -154,7 +160,8 @@
                 <div class="timeline">
                   <div class="timeline-content">
                     <div class="timeline-icon-login">
-                      <img src="assets/login.png" alt="login" />
+                      <img class="login-screen" src="assets/login.png" alt="login-screen" />
+                      <img class="login-smartphone" src="assets/login_smartphone.png" alt="login-smartphone" />
                     </div>
                     <h3 class="title">August 2011 - August 2014</h3>
                     <p class="description">
@@ -243,5 +250,6 @@
       </div>
       <p class="end">Copyright by Natascha Karlen</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
