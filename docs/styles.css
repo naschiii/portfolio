@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 45px;
+  padding-top: 20px;
   padding-left: 8%;
   padding-right: 8%;
 }
@@ -137,8 +137,10 @@ h4 {
   transition: 0.5s;
 }
 .about-text {
-  margin-left: 50px;
+  /* margin-left: 50px; */
   transition: 0.5s;
+  align-items: center;
+  text-align: center;
 }
 .main {
   width: 1130px;
@@ -174,27 +176,52 @@ h4 {
   margin-bottom: 45px;
   transition: 0.5s;
 }
-/* button {
-  background-color: #f9004d;
-  color: white;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 13px 30px;
-  border-radius: 30px;
-  transition: 0.4s;
+
+.galerie-1 {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 80vh;
 }
-button:hover {
-  background-color: transparent;
-  border: 2px solid;
-  cursor: pointer;
-} */
+
+.galerie-1 .box {
+  flex: 1;
+  overflow: hidden;
+  transition: 1.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+
+.galerie-1 .box > img {
+  width: 80%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.galerie-1 .box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
 
 /* Laufbahn */
 .laufbahn {
   background: #ffffff;
   width: 100%;
-  padding: 30px 20px;
+  padding: 30px 70px;
 }
 .laufbahn .title h2 {
   color: rgb(0, 0, 0);
@@ -207,6 +234,20 @@ button:hover {
   text-transform: capitalize;
   transition: 0.5s;
 }
+.laufbahn .untertitel h3 {
+  color: rgb(0, 0, 0);
+  padding-top: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.laufbahn .untertitel-2 h3 {
+  color: rgb(0, 0, 0);
+  padding-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
 .Yearly-timeline {
   font-family: "Poppins", sans-serif;
 }
@@ -250,7 +291,7 @@ button:hover {
   background: linear-gradient(
     90deg,
     rgba(8, 0, 142, 1) 0%,
-    rgba(20, 20, 226, 1) 9%,
+    rgba(20, 20, 226, 1) 12%,
     rgba(0, 212, 255, 1) 100%
   );
   text-align: center;
@@ -334,46 +375,46 @@ button:hover {
 }
 .Yearly-timeline .timeline:nth-child(4n + 2):before,
 .Yearly-timeline .timeline:nth-child(4n + 2):after {
-  border-color: rgb(180, 241, 182);
+  border-color: rgb(0, 212, 255);
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 2) .timeline-content {
-  background: rgb(180, 241, 182);
+  background: rgb(0, 212, 255);
   background: linear-gradient(
     90deg,
-    rgba(180, 241, 182, 1) 0%,
-    rgba(109, 205, 112, 1) 14%,
-    rgba(0, 79, 2, 1) 100%
+    rgba(0, 212, 255, 1) 0%,
+    rgba(20, 20, 226, 1) 88%,
+    rgba(8, 0, 142, 1) 100%
   );
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 3):before,
 .Yearly-timeline .timeline:nth-child(4n + 3):after {
-  border-color: rgba(255, 207, 121, 1);
+  border-color: rgb(0, 212, 255);
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 3) .timeline-content {
-  background: rgb(255, 72, 0);
+  background: rgb(8, 0, 142);
   background: linear-gradient(
     90deg,
-    rgba(255, 72, 0, 1) 0%,
-    rgba(255, 162, 0, 1) 41%,
-    rgba(255, 207, 121, 1) 100%
+    rgba(8, 0, 142, 1) 0%,
+    rgba(20, 20, 226, 1) 12%,
+    rgba(0, 212, 255, 1) 100%
   );
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 4):before,
 .Yearly-timeline .timeline:nth-child(4n + 4):after {
-  border-color: rgb(237, 220, 254);
+  border-color: rgb(0, 212, 255);
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 4) .timeline-content {
-  background: rgb(237, 220, 254);
+  background: rgb(0, 212, 255);
   background: linear-gradient(
     90deg,
-    rgba(237, 220, 254, 1) 0%,
-    rgba(192, 128, 255, 1) 41%,
-    rgba(40, 0, 78, 1) 100%
+    rgba(0, 212, 255, 1) 0%,
+    rgba(20, 20, 226, 1) 88%,
+    rgba(8, 0, 142, 1) 100%
   );
   transition: 0.5s;
 }
@@ -396,6 +437,24 @@ button:hover {
   margin: 20px;
 }
 .timeline-icon-SBB .sbb-smartphone {
+  display: none;
+}
+
+.timeline-icon-bfh .bfh-screen {
+  height: auto;
+  width: 100px;
+  margin: 20px;
+}
+.timeline-icon-bfh .bfh-smartphone {
+  display: none;
+}
+
+.timeline-icon-kbs .kbs-screen {
+  height: auto;
+  width: 100px;
+  margin: 20px;
+}
+.timeline-icon-kbs .kbs-smartphone {
   display: none;
 }
 
@@ -501,7 +560,7 @@ h5 {
 }
 .contact .button-two {
   background-color: #3c75d8;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
@@ -609,6 +668,34 @@ footer p:nth-child(2) {
   font-size: 14px;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: #141c38;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.5s;
+  /* z-index: 1; */
+}
+
+.back-to-top:hover {
+  opacity: 60%;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.back-to-top-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #3c75d8;
+}
+
 /* Breakpoint Smartphone */
 @media screen and (max-width: 420px) {
   .content {
@@ -625,6 +712,7 @@ footer p:nth-child(2) {
   }
   .about-text {
     margin-left: 0px;
+    align-items: center;
     text-align: center;
     transition: 0.5s;
   }
@@ -717,6 +805,9 @@ footer p:nth-child(2) {
   }
 
   /* Laufbahn */
+  .laufbahn {
+    padding: 30px 20px;
+  }
   .laufbahn .title h2 {
     font-size: 35px;
     text-transform: capitalize;
@@ -741,6 +832,27 @@ footer p:nth-child(2) {
     width: 120px;
     margin: 20px;
   }
+
+  .timeline-icon-bfh .bfh-screen {
+    display: none;
+  }
+  .timeline-icon-bfh .bfh-smartphone {
+    display: inline;
+    height: auto;
+    width: 60px;
+    margin: 10px;
+  }
+
+  .timeline-icon-kbs .kbs-screen {
+    display: none;
+  }
+  .timeline-icon-kbs .kbs-smartphone {
+    display: inline;
+    height: auto;
+    width: 120px;
+    margin: 10px;
+  }
+
   .Yearly-timeline .timeline {
     width: 100%;
     padding: 30px 0 0 30px;
@@ -790,9 +902,35 @@ footer p:nth-child(2) {
 
 /* Breakpoint Desktop */
 @media screen and (max-width: 1130px) {
-  .main {
-    flex-direction: column-reverse;
-    margin: 0 auto;
-    justify-content: space-evenly;
+  galerie-1 {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+
+  .galerie-1 .box {
+    flex: 1;
+    overflow: hidden;
+    transition: 1.5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+  }
+
+  .galerie-1 .box > img {
+    width: 80%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: 0.5s;
+  }
+
+  .galerie-1 .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
   }
 }
