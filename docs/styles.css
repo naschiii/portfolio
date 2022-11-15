@@ -42,7 +42,7 @@
   letter-spacing: 1px;
 }
 span {
-  color: #3c75d8;
+  color: #294981;
 }
 .navbar li {
   list-style-type: none;
@@ -58,73 +58,56 @@ span {
 }
 
 .navbar li a:hover {
-  color: #000000;
+  color: #3c75d8;
   transition: 0.4s;
 }
 
-/* .btn {
-  background-color: #f9004d;
-  color: white;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: transform.4s;
-}
-.btn:hover {
-  transform: scale(1.2);
-} */
-
 .content {
   position: absolute;
-  top: 60%;
-  left: 8%;
-  /* transform: translate(-50); */
-}
-h1 {
-  color: white;
-  margin: 2px 0px 20px;
-  font-size: 75px;
+  right: 0;
+  left: 0;
+  top: 150px;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5); */
+  /* background: rgba(255, 255, 255, 0.25); */
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+  max-width: 700px;
+  border-radius: 10px;
+  border: solid 1px white;
+  backdrop-filter: blur(8px);
 }
 
-h3 {
+.content:hover {
+  backdrop-filter: none;
+  border: solid 5px white;
+  transition: 0.5s;
+}
+
+.content h1 {
+  color: white;
+  font-size: 75px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.content h3 {
   color: white;
   font-size: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-h4 {
+.content h4 {
   color: white;
   letter-spacing: 2px;
   font-size: 20px;
+  margin-bottom: 20px;
 }
-/* .newsletter form {
-  width: 380px;
-  max-width: 100%;
-  position: relative;
-}
-.newsletter form input:first-child {
-  display: inline-block;
-  width: 100%;
-  padding: 14px 20px 14px;
-  border: 2px solid #f9004d;
-  outline-offset: none;
-  border-radius: 30px;
-}
-.newsletter form input:last-child {
-  position: absolute;
-  display: inline-block;
-  outline: none;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 30px;
-  background-color: #f9004d;
-  color: white;
-  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-  top: 6px;
-  right: 6px;
-} */
 
 .about {
   width: 100%;
@@ -187,7 +170,7 @@ h4 {
 
 .galerie-1 .box {
   flex: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: 1.5s;
   margin: 0 2%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
@@ -195,8 +178,8 @@ h4 {
 }
 
 .galerie-1 .box > img {
-  width: 80%;
-  height: calc(100% - 10vh);
+  width: 100%;
+  height: calc(80% - 10vh);
   object-fit: cover;
   transition: 0.5s;
 }
@@ -210,11 +193,13 @@ h4 {
 }
 
 .box:hover {
-  flex: 1 1 50%;
+  flex: 1 30%;
+  transition: 0.5s;
 }
 .box:hover > img {
   width: 100%;
   height: 100%;
+  transition: 0.5s;
 }
 
 /* Laufbahn */
@@ -239,6 +224,7 @@ h4 {
   padding-top: 5px;
   font-size: 30px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .laufbahn .untertitel-2 h3 {
@@ -246,6 +232,7 @@ h4 {
   padding-top: 50px;
   font-size: 30px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .Yearly-timeline {
@@ -264,18 +251,7 @@ h4 {
   position: relative;
   transition: 0.5s;
 }
-.Yearly-timeline .timeline:before,
-.Yearly-timeline .timeline:after {
-  content: "";
-  height: 60px;
-  width: 2px;
-  border-left: 2px solid #66beff;
-  transform: rotate(-45deg);
-  position: absolute;
-  right: 30px;
-  bottom: 0;
-  transition: 0.5s;
-}
+
 .Yearly-timeline .timeline:after {
   background-color: #fff;
   height: 20px;
@@ -298,7 +274,7 @@ h4 {
   min-height: 170px;
   /* margin-left: 10px; */
   padding: 30px 35px 35px;
-  border-radius: 15px 15px 0 15px;
+  border-radius: 15px 15px 15px 15px;
   display: block;
   position: relative;
   z-index: 1;
@@ -354,7 +330,7 @@ h4 {
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(even) {
-  padding: 30px 0 30px 30px;
+  padding: 0 0 30px 30px;
   float: right;
   transition: 0.5s;
 }
@@ -370,7 +346,7 @@ h4 {
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(even) .timeline-content {
-  border-radius: 15px 15px 15px 0;
+  border-radius: 15px 15px 15px 15px;
   transition: 0.5s;
 }
 .Yearly-timeline .timeline:nth-child(4n + 2):before,
@@ -456,6 +432,18 @@ h4 {
 }
 .timeline-icon-kbs .kbs-smartphone {
   display: none;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* skills */
@@ -679,7 +667,7 @@ footer p:nth-child(2) {
   cursor: pointer;
   opacity: 100%;
   transition: opacity 0.5s;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 .back-to-top:hover {
@@ -762,22 +750,26 @@ footer p:nth-child(2) {
   /* about content */
   .content {
     position: absolute;
-    top: 80%;
+    top: 40%;
     transition: 0.5s;
+    /* backdrop-filter: blur(8px); */
   }
 
   .content h1 {
     font-size: 40px;
     transition: 0.2s;
     margin-bottom: 5px;
+    text-align: center;
   }
   .content h3 {
     font-size: 25px;
     transition: 0.2s;
+    text-align: center;
   }
   .content h4 {
     font-size: 15px;
     transition: 0.2s;
+    text-align: center;
   }
 
   .main img {
@@ -819,7 +811,7 @@ footer p:nth-child(2) {
   .timeline-icon-SBB .sbb-smartphone {
     display: inline;
     height: auto;
-    width: 150px;
+    width: 80px;
     margin: 10px;
   }
 
@@ -829,7 +821,7 @@ footer p:nth-child(2) {
   .timeline-icon-login .login-smartphone {
     display: inline;
     height: auto;
-    width: 120px;
+    width: 100px;
     margin: 20px;
   }
 
@@ -839,7 +831,7 @@ footer p:nth-child(2) {
   .timeline-icon-bfh .bfh-smartphone {
     display: inline;
     height: auto;
-    width: 60px;
+    width: 40px;
     margin: 10px;
   }
 
@@ -849,7 +841,7 @@ footer p:nth-child(2) {
   .timeline-icon-kbs .kbs-smartphone {
     display: inline;
     height: auto;
-    width: 120px;
+    width: 100px;
     margin: 10px;
   }
 
@@ -877,6 +869,9 @@ footer p:nth-child(2) {
   .Yearly-timeline .timeline:nth-child(even) .timeline-content {
     border-radius: 0 15px 15px 15px;
   }
+  .Yearly-timeline .timeline:nth-child(even) {
+    padding: 30px 0 0 30px;
+  }
   .Yearly-timeline .timeline-content {
     padding: 30px 35px;
     transition: 0.5s;
@@ -902,7 +897,7 @@ footer p:nth-child(2) {
 
 /* Breakpoint Desktop */
 @media screen and (max-width: 1130px) {
-  galerie-1 {
+  /* galerie-1 {
     display: flex;
     width: 100%;
     padding: 4% 2%;
@@ -917,6 +912,7 @@ footer p:nth-child(2) {
     margin: 0 2%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     line-height: 0;
+    text-align: center;
   }
 
   .galerie-1 .box > img {
@@ -932,5 +928,5 @@ footer p:nth-child(2) {
     text-align: center;
     height: 10vh;
     line-height: 2.6;
-  }
+  } */
 }
