@@ -110,6 +110,8 @@ span {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 50px 10px;
   background-color: #000000;
@@ -170,7 +172,7 @@ span {
 
 .galerie-1 .box {
   flex: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: 1.5s;
   margin: 0 2%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
@@ -846,7 +848,7 @@ footer p:nth-child(2) {
 
   .Yearly-timeline .timeline {
     width: 100%;
-    padding: 30px 0 0 30px;
+    padding: 20px 20px 20px 20px;
     margin: 0 0 20px;
   }
   .Yearly-timeline .timeline:before,
@@ -866,10 +868,10 @@ footer p:nth-child(2) {
   }
   .Yearly-timeline .timeline-content,
   .Yearly-timeline .timeline:nth-child(even) .timeline-content {
-    border-radius: 0 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
   }
   .Yearly-timeline .timeline:nth-child(even) {
-    padding: 30px 0 0 30px;
+    padding: 20px 20px 20px 20px;
   }
   .Yearly-timeline .timeline-content {
     padding: 30px 35px;
