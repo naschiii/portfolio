@@ -436,7 +436,7 @@ span {
 
 .reveal {
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(50px);
   opacity: 0;
   transition: 1s all ease;
 }
@@ -689,7 +689,6 @@ footer p:nth-child(2) {
   .content {
     position: absolute;
     top: 80%;
-    left: 1%;
   }
 
   .menu {
