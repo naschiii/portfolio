@@ -169,6 +169,10 @@ span {
   box-sizing: border-box;
   height: 80vh;
 }
+.zeile {
+  display: flex;
+  flex-direction: row;
+}
 
 .galerie-1 .box {
   flex: 1;
@@ -407,7 +411,7 @@ span {
 .timeline-icon-Arg img {
   height: auto;
   width: 100px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 .timeline-icon-SBB .sbb-screen {
   height: auto;
@@ -421,7 +425,6 @@ span {
 .timeline-icon-bfh .bfh-screen {
   height: auto;
   width: 100px;
-  margin: 20px;
 }
 .timeline-icon-bfh .bfh-smartphone {
   display: none;
@@ -430,7 +433,7 @@ span {
 .timeline-icon-kbs .kbs-screen {
   height: auto;
   width: 100px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 .timeline-icon-kbs .kbs-smartphone {
   display: none;
@@ -898,36 +901,23 @@ footer p:nth-child(2) {
 
 /* Breakpoint Desktop */
 @media screen and (max-width: 1130px) {
-  /* galerie-1 {
-    display: flex;
+  .zeile {
+    flex-direction: column;
+  }
+  .box .img {
     width: 100%;
-    padding: 4% 2%;
-    box-sizing: border-box;
-    height: 100vh;
-  }
-
-  .galerie-1 .box {
-    flex: 1;
-    overflow: hidden;
-    transition: 1.5s;
-    margin: 0 2%;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    line-height: 0;
-    text-align: center;
-  }
-
-  .galerie-1 .box > img {
-    width: 80%;
-    height: calc(100% - 10vh);
+    height: 80%;
     object-fit: cover;
     transition: 0.5s;
   }
-
-  .galerie-1 .box > span {
-    font-size: 3.8vh;
-    display: block;
-    text-align: center;
-    height: 10vh;
-    line-height: 2.6;
-  } */
+  .box:hover {
+    flex: 1 0%;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .box:hover .img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
 }
