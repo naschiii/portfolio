@@ -458,7 +458,126 @@ span {
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
 }
+.skills .title h2 {
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  text-align: center;
+  text-transform: capitalize;
+}
 
+.skill-container {
+  width: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin: 20px 80px;
+}
+.skill-container .skill {
+  margin-bottom: 30px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+.skill-container .skill h3 {
+  color: #000000;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.skill-container .skill h4 {
+  color: #000000;
+  float: right;
+}
+
+.skill-container .skill .skill-bar {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 17px;
+  border-radius: 15px;
+  background: black;
+}
+
+.skill-container .skill .fill-bar {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 17px;
+  border-radius: 15px;
+  background: #3c75d8;
+}
+.skill-container .skill .html {
+  animation: html 2s;
+  width: 60%;
+}
+.skill-container .skill .css {
+  animation: css 2s;
+  width: 60%;
+}
+.skill-container .skill .python {
+  animation: python 2s;
+  width: 40%;
+}
+.skill-container .skill .englisch {
+  animation: englisch 2s;
+  width: 70%;
+}
+.skill-container .skill .französisch {
+  animation: französisch 2s;
+  width: 80%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes python {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes englisch {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes französisch {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/*
 .skills .box {
   display: flex;
   justify-content: center;
@@ -487,17 +606,7 @@ span {
   margin: 25px 0px;
   color: #3c75d8;
 }
-
-.skills .title h2 {
-  color: rgb(255, 255, 255);
-  font-size: 75px;
-  margin-top: 30px;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-left: auto;
-  text-align: center;
-  text-transform: capitalize;
-}
+*/
 
 h5 {
   color: white;
@@ -597,6 +706,7 @@ footer p:nth-child(2) {
 
 .some ul li {
   list-style: none;
+  margin: 5px;
 }
 
 .some ul li a {
@@ -604,14 +714,14 @@ footer p:nth-child(2) {
   height: 70px;
   background-color: #fff;
   text-align: center;
-  line-height: 80px;
-  font-size: 35px;
+  line-height: 78px;
+  font-size: 40px;
   margin: 0 10px;
   display: block;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   z-index: 1;
 }
 
@@ -631,23 +741,33 @@ footer p:nth-child(2) {
   content: "";
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: -4px;
+  width: 120%;
+  height: 120%;
   transition: 0.5s;
   z-index: 2;
 }
 
 .some ul li a:hover:before {
-  top: 0;
+  top: -4px;
 }
 
 .some ul li:nth-child(1) a:before {
-  background: #3b5999;
+  background: radial-gradient(
+    circle,
+    rgba(195, 195, 195, 1) 0%,
+    rgba(84, 83, 84, 1) 0%,
+    rgba(195, 195, 195, 1) 100%
+  );
 }
 
 .some ul li:nth-child(2) a:before {
-  background: #7f3dac;
+  background: linear-gradient(
+    117deg,
+    rgba(223, 219, 87, 1) 0%,
+    rgba(193, 47, 108, 1) 35%,
+    rgba(84, 52, 212, 1) 100%
+  );
 }
 
 .some ul li:nth-child(3) a:before {
@@ -719,10 +839,6 @@ footer p:nth-child(2) {
   } */
 
   /* Navigation-Bar */
-  .navbar {
-    padding: 5px 0;
-    margin: 0px 20px;
-  }
   #menu-bar {
     display: block;
   }
