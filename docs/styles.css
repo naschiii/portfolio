@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "josefin sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -17,6 +17,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  font-size: 30px;
+  color: white;
   cursor: pointer;
   display: none;
   z-index: 10001;
@@ -36,10 +38,11 @@
   padding-left: 8%;
   padding-right: 8%;
 }
-.logo {
-  color: rgb(0, 0, 0);
-  font-size: 35px;
-  letter-spacing: 1px;
+.logo img {
+  width: 100px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -10px;
 }
 span {
   color: #294981;
@@ -113,7 +116,7 @@ span {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 50px 10px;
+  padding: 50px 10px 10px 10px;
   background-color: #000000;
 }
 .main img {
@@ -122,7 +125,6 @@ span {
   transition: 0.5s;
 }
 .about-text {
-  /* margin-left: 50px; */
   transition: 0.5s;
   align-items: center;
   text-align: center;
@@ -183,10 +185,12 @@ span {
   line-height: 0;
 }
 
-.galerie-1 .box > img {
+.galerie-1 .box img {
   width: 100%;
   height: calc(80% - 10vh);
   object-fit: cover;
+  border: solid white;
+  border-radius: 15px;
   transition: 0.5s;
 }
 
@@ -195,14 +199,14 @@ span {
   display: block;
   text-align: center;
   height: 1vh;
-  line-height: 2.6;
+  line-height: 1.6;
 }
 
-.box:hover {
+.galerie-1 .box:hover {
   flex: 1 30%;
   transition: 0.5s;
 }
-.box:hover > img {
+.galerie-1 .box:hover img {
   width: 100%;
   height: 100%;
   transition: 0.5s;
@@ -239,6 +243,7 @@ span {
   font-size: 30px;
   text-align: center;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 
 .Yearly-timeline {
@@ -472,7 +477,7 @@ span {
 .skill-container {
   width: auto;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 15px 30px;
   margin: 20px 80px;
 }
@@ -577,76 +582,17 @@ span {
   }
 }
 
-/*
-.skills .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-}
-.skills .box .card:hover {
-  transform: scale(1.1);
-}
-
-.skills .card {
-  height: 300px;
-  width: 250px;
-  padding: 20px 35px;
-  background: #191919;
-  border-radius: 20px;
-  margin: 15px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-.skills .card i {
-  font-size: 50px;
-  display: block;
-  text-align: center;
-  margin: 25px 0px;
-  color: #3c75d8;
-}
-*/
-
-h5 {
-  color: white;
-  font-size: 23px;
-  margin-bottom: 15px;
-}
-
-.pra p {
-  color: #66beff;
-  font-size: 16px;
-  line-height: 27px;
-  margin-bottom: 15px;
-}
-
-.card .button {
-  background-color: #3c75d8;
-  color: white;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 9px 22px;
-  border-radius: 30px;
-  transition: 0.4s;
-}
-
-.card .button:hover {
-  background-color: transparent;
-  border: 2px solid;
-  cursor: pointer;
-}
+/* Kontakt */
 .contact {
   width: 100%;
-  height: 200px;
+  height: 300px;
   background: #ffffff;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.contact .title h2 {
+.contact .contact-text h2 {
   color: rgb(0, 0, 0);
   font-size: 75px;
   text-align: center;
@@ -679,7 +625,7 @@ h5 {
 footer {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 300px;
   background: #3c75d8;
   display: flex;
   flex-direction: column;
@@ -778,7 +724,7 @@ footer p:nth-child(2) {
   position: absolute;
   color: #000000;
   bottom: 20px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .back-to-top {
@@ -809,24 +755,20 @@ footer p:nth-child(2) {
   color: #3c75d8;
 }
 
-/* Breakpoint Smartphone */
-@media screen and (max-width: 420px) {
-  .content {
-    position: absolute;
-    top: 80%;
+/* Breakpoint Desktop */
+@media screen and (max-width: 1130px) {
+  .zeile {
+    flex-direction: column;
   }
-
-  .menu {
-    padding: 14px 2%;
-    transition: 0.2s;
-    width: 100%;
-    background-image: url(assets/BG_smartphone.jpg);
+  .galerie-1 {
+    height: 100vh;
   }
-  .about-text {
-    margin-left: 0px;
-    align-items: center;
-    text-align: center;
-    transition: 0.5s;
+  .galerie-1 .box img {
+    height: 80%;
+  }
+  .galerie-1 .box:hover {
+    flex: 1 0%;
+    margin-bottom: 5px;
   }
 }
 
@@ -870,7 +812,7 @@ footer p:nth-child(2) {
   /* about content */
   .content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     transition: 0.5s;
     /* backdrop-filter: blur(8px); */
   }
@@ -916,6 +858,14 @@ footer p:nth-child(2) {
     margin-bottom: 45px;
   }
 
+  /* Bilder */
+  .galerie-1 {
+    height: 80vh;
+  }
+  .galerie-1 .box img {
+    height: 80%;
+    object-fit: cover;
+  }
   /* Laufbahn */
   .laufbahn {
     padding: 30px 20px;
@@ -934,7 +884,6 @@ footer p:nth-child(2) {
     width: 80px;
     margin: 10px;
   }
-
   .timeline-icon-login .login-screen {
     display: none;
   }
@@ -944,7 +893,6 @@ footer p:nth-child(2) {
     width: 100px;
     margin: 20px;
   }
-
   .timeline-icon-bfh .bfh-screen {
     display: none;
   }
@@ -954,7 +902,6 @@ footer p:nth-child(2) {
     width: 40px;
     margin: 10px;
   }
-
   .timeline-icon-kbs .kbs-screen {
     display: none;
   }
@@ -964,7 +911,6 @@ footer p:nth-child(2) {
     width: 100px;
     margin: 10px;
   }
-
   .Yearly-timeline .timeline {
     width: 100%;
     padding: 20px 20px 20px 20px;
@@ -1003,11 +949,11 @@ footer p:nth-child(2) {
     margin-bottom: 15px;
   }
 
+  /* Kontakt */
   .contact .title h2 {
     font-size: 35px;
     text-transform: capitalize;
   }
-
   .contact .contact-text p {
     font-size: 14px;
     letter-spacing: 1px;
@@ -1015,25 +961,23 @@ footer p:nth-child(2) {
   }
 }
 
-/* Breakpoint Desktop */
-@media screen and (max-width: 1130px) {
-  .zeile {
-    flex-direction: column;
+/* Breakpoint Smartphone */
+@media screen and (max-width: 420px) {
+  .content {
+    position: absolute;
+    top: 40%;
   }
-  .box .img {
+
+  .menu {
+    padding: 14px 2%;
+    transition: 0.2s;
     width: 100%;
-    height: 80%;
-    object-fit: cover;
-    transition: 0.5s;
+    background-image: url(assets/BG_smartphone.jpg);
   }
-  .box:hover {
-    flex: 1 0%;
-    margin-bottom: 5px;
-    transition: 0.5s;
-  }
-  .box:hover .img {
-    width: 100%;
-    height: 100%;
+  .about-text {
+    margin-left: 0px;
+    align-items: center;
+    text-align: center;
     transition: 0.5s;
   }
 }
