@@ -78,8 +78,6 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5); */
-  /* background: rgba(255, 255, 255, 0.25); */
   height: 100%;
   width: 100%;
   max-height: 200px;
@@ -120,6 +118,7 @@ span {
   width: 100%;
   padding: 50px 10px 10px 10px;
   background-color: #000000;
+  align-items: center;
 }
 .main img {
   height: auto;
@@ -166,10 +165,39 @@ span {
   transition: 0.5s;
 }
 
+.about-map {
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.about-map h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  font-size: 30px;
+}
+
+.about-map p {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  margin-bottom: 45px;
+  transition: 0.5s;
+}
+
+.map {
+  height: 300px;
+  width: 800px;
+  border: solid white;
+  border-radius: 15px;
+}
+
 .galerie-1 {
   display: flex;
   width: 100%;
-  padding: 4% 2%;
+  padding: 1% 2%;
   box-sizing: border-box;
   height: 80vh;
 }
@@ -185,6 +213,13 @@ span {
   margin: 0 2%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   line-height: 0;
+}
+
+.hobbys h3 {
+color: white;
+font-size: 30px;
+text-align: center;
+margin-top: 50px;
 }
 
 .galerie-1 .box img {
@@ -773,6 +808,12 @@ footer p:nth-child(2) {
   }
 }
 
+@media screen and (max-width: 830px) {
+  .map {
+    width: auto;
+    transition: 0.5s;
+  }
+
 /* Breakpoint iPad & Tablet */
 @media screen and (max-width: 680px) {
   /* .logo {
@@ -828,11 +869,13 @@ footer p:nth-child(2) {
     font-size: 25px;
     transition: 0.2s;
     text-align: center;
+    transition: 0.5s;
   }
   .content h4 {
     font-size: 15px;
     transition: 0.2s;
     text-align: center;
+    transition: 0.5s;
   }
 
   .main img {

@@ -25,6 +25,16 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <div class="menu" id="home">
@@ -39,7 +49,6 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
-        <!-- <div class="fas fa-times" id="close-menu"></div> -->
         <div class="fas fa-bars" id="menu-bar"></div>
       </nav>
       <div class="content">
@@ -48,7 +57,6 @@
         <h1>Natascha Karlen</h1>
       </div>
     </div>
-
     <!-- Über mich section -->
     <section class="about" id="about">
       <div class="main">
@@ -63,25 +71,37 @@
           </p>
         </div>
       </div>
-      <div class="galerie-1">
-        <div class="zeile">
-          <div class="box">
-            <img src= assets/Me.jpg>
-            <span>Bärga</span>
-          </div>
-          <div class="box">
-            <img src=assets/MGS.jpg>
-            <span>Müsig</span>
-          </div>
+      <div class="about-map">
+        <!-- Animation von https://animate.style/ -->
+        <div class="about-animation">
+          <h3 class="animate__animated animate__tada">Waaaaas??</h3>
         </div>
-        <div class="zeile">
-          <div class="box">
-            <img src=assets/Reisen.jpg>
-            <span>Reisu</span>
+        <p>Du weisst nicht wo Töbel liegt? Dann schau mal hier:</p>
+        <!-- Map von https://leafletjs.com/ -->
+        <div class="map" id="map"></div>
+      </div>
+      <div class="hobbys">
+        <h3>Meine Hobbys</h3>
+        <div class="galerie-1">
+          <div class="zeile">
+            <div class="box">
+              <img src= assets/Me.jpg>
+              <span>Bärga</span>
+            </div>
+            <div class="box">
+              <img src=assets/MGS.jpg>
+              <span>Müsig</span>
+            </div>
           </div>
-          <div class="box">
-            <img src= assets/Freunde.jpg>
-            <span>Freunda</span>
+          <div class="zeile">
+            <div class="box">
+              <img src=assets/Reisen.jpg>
+              <span>Reisu</span>
+            </div>
+            <div class="box">
+              <img src= assets/Freunde.jpg>
+              <span>Freunda</span>
+            </div>
           </div>
         </div>
       </div>
@@ -283,7 +303,7 @@
     <div class="skills" id="skills">
       <div class="title">
         <h2>Meine Skills</h2>
-        <div class="skill-container reveal">
+        <div class="skill-container">
           <div class="skill">
             <h3>HTML</h3>
             <h4>60%</h4>
@@ -378,5 +398,21 @@
     </button>
     <div class="progress-bar" />
     <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script>
+      var map = L.map("map").setView([46.23852, 7.851508], 15);
+
+      googleSat = L.tileLayer(
+        "http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        {
+          subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        }
+      ).addTo(map);
+      var marker = L.marker([46.23852, 7.851508]).addTo(map);
+    </script>
   </body>
 </html>
