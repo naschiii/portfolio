@@ -942,6 +942,21 @@ footer p {
       width: 80px;
       margin: 10px;
     }
+
+    .timeline-icon-nordkapp .nordkapp-screen {
+      display: inline;
+      height: auto;
+      width: 80px;
+      margin: 10px;
+    }
+
+    .timeline-icon-eurasia .eurasia-screen {
+      display: inline;
+      height: auto;
+      width: 80px;
+      margin: 10px;
+    }
+
     .timeline-icon-login .login-screen {
       display: none;
     }
