@@ -216,13 +216,6 @@ span {
   margin-top: 50px;
 }
 
-.love h3 {
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 50px;
-}
-
 .galerie-1 .box img {
   width: 100%;
   height: calc(80% - 10vh);
@@ -263,12 +256,11 @@ span {
   width: 100%;
 }
 
-.galerie-2 .box {
+.galerie-2 .zeile-2 .box {
   flex: 1;
   overflow: hidden;
   transition: 1.5s;
   margin: 0 2%;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   line-height: 0;
 }
 
