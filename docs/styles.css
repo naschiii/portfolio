@@ -37,6 +37,7 @@
   justify-content: space-between;
   padding-left: 8%;
   padding-right: 8%;
+  margin-top: 30px;
 }
 
 span {
@@ -319,7 +320,6 @@ span {
   font-size: 30px;
   text-align: center;
   margin-bottom: 50px;
-  font-weight: bold;
 }
 
 .Yearly-timeline {
@@ -909,7 +909,7 @@ footer p {
     margin-bottom: 5px;
   }
 }
-
+/* Breakpoint wegen Map */
 @media screen and (max-width: 830px) {
   .map {
     width: auto;
@@ -1118,7 +1118,7 @@ footer p {
     }
   }
 
-  /* Breakpoint Smartphone */
+  /* Breakpoint Smartphone (iPhone SE) */
   @media screen and (max-width: 420px) {
     .content {
       position: absolute;
