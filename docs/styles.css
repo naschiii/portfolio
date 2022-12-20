@@ -35,16 +35,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-top: 10px; */
   padding-left: 8%;
   padding-right: 8%;
 }
-.logo img {
-  width: 100px;
-  height: 80px;
-  margin-left: -40px;
-  margin-top: -20px;
-}
+
 span {
   color: #294981;
   font-weight: 800;
@@ -204,6 +198,7 @@ span {
 .zeile {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .galerie-1 .box {
@@ -211,7 +206,6 @@ span {
   overflow: hidden;
   transition: 1.5s;
   margin: 0 2%;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   line-height: 0;
 }
 
@@ -254,6 +248,52 @@ span {
   width: 100%;
   height: 100%;
   transition: 0.5s;
+}
+
+.galerie-2 {
+  display: flex;
+  width: 100%;
+  padding: 1% 2%;
+  box-sizing: border-box;
+  height: 80vh;
+}
+.zeile-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.galerie-2 .box {
+  flex: 1;
+  overflow: hidden;
+  transition: 1.5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+}
+
+.love h3 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.galerie-2 .box img {
+  width: 100%;
+  height: calc(80% - 10vh);
+  object-fit: cover;
+  border: solid white;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.galerie-2 .box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 1.6;
 }
 
 /* Laufbahn */
@@ -327,7 +367,6 @@ span {
   );
   text-align: center;
   min-height: 170px;
-  /* margin-left: 10px; */
   padding: 30px 35px 35px;
   border-radius: 15px 15px 15px 15px;
   display: block;
@@ -347,7 +386,6 @@ span {
 }
 
 .Yearly-timeline .timeline-content:before {
-  /* content: ""; */
   background-color: #fff;
   position: absolute;
   left: 17px;
@@ -636,18 +674,17 @@ span {
     width: 80%;
   }
 }
-
-/* Kontakt */
-.contact {
+/* Facts */
+.facts {
   width: 100%;
-  height: 250px;
+  height: 500px;
   background: #ffffff;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.contact .title h2 {
+.facts .title h2 {
   color: rgb(0, 0, 0);
   font-size: 75px;
   text-align: center;
@@ -655,15 +692,61 @@ span {
   padding: 30px 70px;
 }
 
-.contact p {
+.facts p {
   color: rgb(0, 0, 0);
   text-align: center;
   font-size: 30px;
   line-height: 28px;
 }
-.contact .button-two {
+
+.fact-text ul li {
+  list-style: none;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 78px;
+  font-size: 40px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+/* Kontakt */
+.contact {
+  width: 100%;
+  height: 195px;
+  background: #3c75d8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact .title h2 {
+  color: white;
+  font-size: 75px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+.contact p {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 28px;
+}
+.contact .button-mail {
   background-color: #3c75d8;
-  color: rgb(0, 0, 0);
+  color: white;
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
@@ -672,7 +755,7 @@ span {
   transition: 0.4s;
   margin-top: 15px;
 }
-.contact .button-two:hover {
+.contact .button-mail:hover {
   background-color: transparent;
   border: 2px solid;
   cursor: pointer;
@@ -680,7 +763,7 @@ span {
 footer {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 200px;
   background: #3c75d8;
   display: flex;
   flex-direction: column;
@@ -693,7 +776,7 @@ footer p {
   font-size: 17px;
   text-align: center;
   line-height: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .some ul {
@@ -771,9 +854,8 @@ footer p {
 }
 
 .end {
-  position: absolute;
   color: #000000;
-  bottom: 20px;
+  margin: 5px;
   font-size: 17px;
 }
 
@@ -810,6 +892,7 @@ footer p {
   .zeile {
     flex-direction: column;
   }
+
   .galerie-1 {
     height: 100vh;
   }
@@ -817,6 +900,19 @@ footer p {
     height: 80%;
   }
   .galerie-1 .box:hover {
+    flex: 1 0%;
+    margin-bottom: 5px;
+  }
+  .zeile-2 {
+    flex-direction: column;
+  }
+  .galerie-2 {
+    height: 100vh;
+  }
+  .galerie-2 .box img {
+    height: 80%;
+  }
+  .galerie-2 .box:hover {
     flex: 1 0%;
     margin-bottom: 5px;
   }
@@ -830,12 +926,6 @@ footer p {
 
   /* Breakpoint iPad & Tablet */
   @media screen and (max-width: 680px) {
-    /* .logo {
-    position: absolute;
-    top: 10px;
-    left: 0;
-  } */
-
     /* Navigation-Bar */
     #menu-bar {
       display: block;
@@ -870,7 +960,6 @@ footer p {
       position: absolute;
       top: 50%;
       transition: 0.5s;
-      /* backdrop-filter: blur(8px); */
     }
 
     .content h1 {
@@ -921,6 +1010,14 @@ footer p {
       height: 80vh;
     }
     .galerie-1 .box img {
+      height: 80%;
+      object-fit: cover;
+    }
+
+    .galerie-2 {
+      height: 80vh;
+    }
+    .galerie-2 .box img {
       height: 80%;
       object-fit: cover;
     }
@@ -1026,11 +1123,6 @@ footer p {
     .contact .title h2 {
       font-size: 35px;
       text-transform: capitalize;
-    }
-    .contact .contact-text p {
-      font-size: 14px;
-      letter-spacing: 1px;
-      line-height: 28px;
     }
   }
 

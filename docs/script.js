@@ -56,17 +56,16 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-// Animation Tada und Skills bei Scroll erneut starten https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ (für skills noch NOK)
+// Animation Tada bei Scroll erneut starten https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const animation = entry.target.querySelector(".animate__animated");
 
     if (entry.isIntersecting) {
       animation.classList.add("animate__tada");
-      return; // if we added the class, exit the function
+      return;
     }
 
-    // We're not intersecting, so remove the class!
     animation.classList.remove("animate__tada");
   });
 });
